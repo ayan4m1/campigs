@@ -1,0 +1,15 @@
+// imported styles
+@import "~video.js/dist/video-js.min.css";
+@import "~bootswatch/dist/darkly/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/darkly/bootswatch";
+
+// global styles
+.light-mode {
+  background-color: $gray-100;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: $gray-900;
+}
