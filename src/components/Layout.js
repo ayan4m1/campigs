@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
 import { Fragment } from 'react';
-import { Container } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { Container } from 'react-bootstrap';
 
 import Header from 'components/Header';
 
-export default function Layout({ children }) {
+export default function Layout({ children, title = '404' }) {
   return (
     <Fragment>
-      <Helmet titleTemplate="CamPigs - %s" />
+      <Helmet title={title} titleTemplate="CamPigs - %s" />
       <Header />
       <Container>{children}</Container>
     </Fragment>
@@ -16,5 +16,6 @@ export default function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string
 };

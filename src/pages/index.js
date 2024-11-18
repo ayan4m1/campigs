@@ -18,7 +18,7 @@ export default function IndexPage() {
 
   return (
     <ThemeProvider>
-      <Layout>
+      <Layout title="Live Stream">
         <Card>
           <video
             className="video-js"
