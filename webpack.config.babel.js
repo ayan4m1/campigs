@@ -2,7 +2,8 @@ import 'dotenv/config';
 
 import { resolve } from 'path';
 import { DefinePlugin } from 'webpack';
-import { CopyPlugin } from 'copy-webpack-plugin';
+// eslint-disable-next-line import-x/default
+import CopyPlugin from 'copy-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
