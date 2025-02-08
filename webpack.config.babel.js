@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 import { resolve } from 'path';
 import { DefinePlugin } from 'webpack';
-import CopyPlugin from 'copy-webpack-plugin';
+import { CopyPlugin } from 'copy-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -40,14 +40,13 @@ const plugins = [
     template: './src/index.html'
   }),
   new ESLintPlugin({
-    configType: 'flat',
-    eslintPath: 'eslint/use-at-your-own-risk'
+    configType: 'flat'
   })
 ];
 
 export default {
   mode: dev ? 'development' : 'production',
-  devtool: dev ? 'eval-cheap-module-source-map' : 'cheap-module-source-map',
+  devtool: dev ? 'eval-cheap-module-source-map' : false,
   entry: './src/index.js',
   devServer: {
     compress: dev,
